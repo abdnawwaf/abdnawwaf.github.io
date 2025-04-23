@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+.logo {
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  font-family: "Special Gothic Expanded One", sans-serif;
+}
