@@ -5,7 +5,79 @@
 }
 .logo {
   font-size: 24px;
-  color: black;
+  color: navy;
   text-decoration: none;
-  font-family: "Special Gothic Expanded One", sans-serif;
+  font-family: "Lexend", sans-serif;
+}
+.ProfilePic {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+}
+.hero {
+  display: flex;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+header {
+  padding: 16px 32px;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+h4 {
+  font-size: 24px;
+  font-family: "Lexend", sans-serif;
+  margin-top: 2px;
+  color: navy;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 2px;
+  font-family: "Lexend", sans-serif;
+}
+.links a {
+  color: navy;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 1px;
+}
+.links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 900;
+}
+footer {
+  padding: 8px;
+  font-size: 14px;
+  color: gray;
+  border-top: 1px solid gray;
+}
+body {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+p {
+  font-family: "Lexend", sans-serif;
+  margin-top: 2px;
+  color: navy;
+  font-size: 15px;
+}
+h1 {
+  font-family: "Lexend", sans-serif;
+  color: navy;
+}
+.copy {
+  padding: 8px;
+  font-size: 14px;
+  color: gray;
 }
