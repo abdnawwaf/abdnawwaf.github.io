@@ -60,6 +60,7 @@ footer {
   font-size: 14px;
   color: gray;
   border-top: 1px solid gray;
+  z-index: 1;
 }
 body {
   min-height: 100svh;
@@ -80,4 +81,73 @@ h1 {
   padding: 8px;
   font-size: 14px;
   color: gray;
+}
+.LinkedinIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.InstaIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.GmailIcon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.links2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 2px;
+  font-family: "Lexend", sans-serif;
+}
+.links2 a {
+  color: navy;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 1px;
+}
+.links2 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 900;
+}
+.links2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.counterapp {
+  text-align: left;
+}
+.projects__main {
+  flex: auto;
+  align-items: start;
+  justify-content: start;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; /* put canvas behind everything */
+}
+
+main {
+  position: relative;
+  z-index: 1; /* put your content above the canvas */
+  color: white;
+}
+.a.logo {
+  z-index: 1;
 }
