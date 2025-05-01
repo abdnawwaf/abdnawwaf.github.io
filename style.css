@@ -148,6 +148,192 @@ main {
   z-index: 1; /* put your content above the canvas */
   color: white;
 }
-.a.logo {
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Lexend", sans-serif;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 16px 32px;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 24px;
+  color: navy;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 16px;
+  position: relative;
   z-index: 1;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  gap: 16px;
+  padding: 20px;
+}
+
+.ProfilePic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: navy;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: navy;
+  margin-top: 4px;
+}
+
+p {
+  font-size: 1rem;
+  color: navy;
+  margin-top: 4px;
+  line-height: 1.6;
+}
+
+.links,
+.links2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.links a,
+.links2 a {
+  color: navy;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.links a:hover,
+.links2 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Adjusted footer */
+footer {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: gray;
+  border-top: 1px solid gray;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.copy {
+  font-size: 14px;
+  padding-left: 8px;
+  margin-top: -4px; /* Adjusted to lift copyright text slightly */
+}
+
+.LinkedinIcon,
+.InstaIcon,
+.GmailIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.projects__main {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  gap: 16px;
+}
+
+.counterapp {
+  max-width: 800px;
+  text-align: left;
+  padding: 16px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero {
+    width: 100%;
+  }
+
+  .ProfilePic {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  /* Adjust footer for smaller screens */
+  footer {
+    padding: 8px;
+    font-size: 12px;
+    justify-content: center; /* Center the content on smaller screens */
+    align-items: center; /* Center the content on smaller screens */
+  }
+
+  .copy {
+    margin-top: 0; /* Reset margin-top for mobile */
+    padding-left: 0; /* Reset left padding for mobile */
+  }
+}
+
+/* Canvas */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
