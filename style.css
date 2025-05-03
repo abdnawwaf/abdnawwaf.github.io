@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: 0;
+  scroll-behavior: smooth;
 }
 .logo {
   font-size: 24px;
@@ -350,4 +351,19 @@ canvas {
   justify-content: center;
   padding: 16px;
   text-align: center;
+}
+/* Enable scroll on homepage only on laptop (min-width: 769px) */
+@media (min-width: 769px) {
+  .homepage {
+    overflow-y: auto; /* allow vertical scrolling */
+    height: 100vh;
+  }
+}
+
+/* Prevent scroll on homepage on mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .homepage {
+    overflow: hidden; /* prevent scrolling */
+    height: 100vh;
+  }
 }
