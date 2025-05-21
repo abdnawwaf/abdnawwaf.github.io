@@ -363,7 +363,7 @@ canvas {
 /* Prevent scroll on homepage on mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .homepage {
-    overflow: hidden; /* prevent scrolling */
-    height: 100vh;
+    overflow-y: auto; /* allow scrolling */
+    height: auto; /* let height grow naturally */
   }
 }
