@@ -1,158 +1,10 @@
+/* Your existing styles... */
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box; /* fixed from original 'box-sizing: 0' */
   scroll-behavior: smooth;
-}
-.logo {
-  font-size: 24px;
-  color: navy;
-  text-decoration: none;
-  font-family: "Lexend", sans-serif;
-}
-.ProfilePic {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-}
-.hero {
-  display: flex;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-}
-header {
-  padding: 16px 32px;
-}
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-}
-h4 {
-  font-size: 24px;
-  font-family: "Lexend", sans-serif;
-  margin-top: 2px;
-  color: navy;
-}
-.links {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 2px;
-  font-family: "Lexend", sans-serif;
-}
-.links a {
-  color: navy;
-  text-decoration: none;
-  font-weight: 700;
-  margin-top: 1px;
-}
-.links a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  font-weight: 900;
-}
-footer {
-  padding: 8px;
-  font-size: 14px;
-  color: gray;
-  border-top: 1px solid gray;
-  z-index: 1;
-}
-body {
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-}
-p {
-  font-family: "Lexend", sans-serif;
-  margin-top: 2px;
-  color: navy;
-  font-size: 15px;
-}
-h1 {
-  font-family: "Lexend", sans-serif;
-  color: navy;
-}
-.copy {
-  padding: 8px;
-  font-size: 14px;
-  color: gray;
-}
-.LinkedinIcon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-.InstaIcon {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-}
-.GmailIcon {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-}
-.links2 {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 2px;
-  font-family: "Lexend", sans-serif;
-}
-.links2 a {
-  color: navy;
-  text-decoration: none;
-  font-weight: 700;
-  margin-top: 1px;
-}
-.links2 a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  font-weight: 900;
-}
-.links2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.counterapp {
-  text-align: left;
-}
-.projects__main {
-  flex: auto;
-  align-items: start;
-  justify-content: start;
-}
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1; /* put canvas behind everything */
-}
-
-main {
-  position: relative;
-  z-index: 1; /* put your content above the canvas */
-  color: white;
-}
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -189,23 +41,6 @@ main {
   flex-wrap: wrap;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 800px;
-  gap: 16px;
-  padding: 20px;
-}
-
-.ProfilePic {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
 h1 {
   font-size: 2.2rem;
   color: navy;
@@ -224,7 +59,23 @@ p {
   line-height: 1.6;
 }
 
-.links,
+.links {
+  display: flex;
+  flex-direction: column; /* change from row to column */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+#live-source {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
 .links2 {
   display: flex;
   flex-direction: column;
@@ -233,7 +84,6 @@ p {
   gap: 12px;
   margin-top: 10px;
 }
-
 .links a,
 .links2 a {
   color: navy;
@@ -267,9 +117,10 @@ footer {
 .copy {
   font-size: 14px;
   padding-left: 8px;
-  margin-top: -4px; /* Adjusted to lift copyright text slightly */
+  margin-top: -4px;
 }
 
+/* Icons general styles */
 .LinkedinIcon,
 .InstaIcon,
 .GmailIcon {
@@ -286,7 +137,6 @@ footer {
   justify-content: flex-start;
   padding: 16px;
   gap: 16px;
-  overflow: hidden;
 }
 
 .counterapp {
@@ -304,6 +154,8 @@ footer {
   .ProfilePic {
     width: 150px;
     height: 150px;
+    border-radius: 50%; /* added for circle */
+    object-fit: cover; /* added for proper image fit */
   }
 
   h1 {
@@ -322,13 +174,13 @@ footer {
   footer {
     padding: 8px;
     font-size: 12px;
-    justify-content: center; /* Center the content on smaller screens */
-    align-items: center; /* Center the content on smaller screens */
+    justify-content: center;
+    align-items: center;
   }
 
   .copy {
-    margin-top: 0; /* Reset margin-top for mobile */
-    padding-left: 0; /* Reset left padding for mobile */
+    margin-top: 0;
+    padding-left: 0;
   }
 }
 
@@ -339,10 +191,12 @@ canvas {
   left: 0;
   z-index: 1;
 }
+
 .homepage {
   overflow: hidden;
 }
-/*to hide contact page's overflow*/
+
+/* to hide contact page's overflow */
 .contact__main {
   max-height: 100vh;
   overflow: hidden;
@@ -352,10 +206,11 @@ canvas {
   padding: 16px;
   text-align: center;
 }
+
 /* Enable scroll on homepage only on laptop (min-width: 769px) */
 @media (min-width: 769px) {
   .homepage {
-    overflow-y: auto; /* allow vertical scrolling */
+    overflow-y: auto;
     height: 100vh;
   }
 }
@@ -363,7 +218,53 @@ canvas {
 /* Prevent scroll on homepage on mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .homepage {
-    overflow-y: auto; /* allow scrolling */
-    height: auto; /* let height grow naturally */
+    overflow-y: auto;
+    height: auto;
+  }
+}
+
+/* ========== NEW: Contact links in a row with icons ========== */
+
+.links2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px; /* space between each contact */
+  margin-top: 20px;
+  flex-wrap: wrap; /* wrap on small screens */
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: navy;
+  text-decoration: none;
+  font-family: "Lexend", sans-serif;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.contact-link i {
+  font-size: 28px;
+  color: navy;
+}
+
+.contact-link:hover {
+  color: #001f4d;
+}
+
+.contact-link:hover i {
+  color: #001f4d;
+}
+@media (min-width: 769px) {
+  .ProfilePic {
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%; /* added for circle */
+    object-fit: cover; /* added for proper image fit */
   }
 }
