@@ -264,7 +264,7 @@ canvas {
     height: 200px;
     max-width: 200px;
     max-height: 200px;
-    border-radius: 50%; /* added for circle */
+    border-radius: 50%;
     object-fit: cover; /* added for proper image fit */
   }
 }
