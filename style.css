@@ -177,12 +177,12 @@ body {
 a {
   text-decoration: none;
   font-weight: bold;
-  color: inherit;
+  color: var(--primary);
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--primary);
+  color: var(--primary-light);
 }
 
 /* ===== Features Section ===== */
