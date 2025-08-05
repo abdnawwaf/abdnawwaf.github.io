@@ -174,6 +174,30 @@ body {
   color: #ccc;
 }
 
+.project {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project:hover .project-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ===== Features Section ===== */
 .features {
   margin: 3rem 0;
