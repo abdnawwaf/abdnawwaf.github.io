@@ -187,12 +187,7 @@ body {
   color: var(--primary-light);
 }
 
-/* Already used class for names like Dhanish Ali */
-.inline-link {
-  color: var(--primary);
-  font-weight: bold;
-  text-decoration: none;
-}
+
 
 .inline-link:hover {
   color: var(--primary-light);
