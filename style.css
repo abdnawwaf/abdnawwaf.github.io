@@ -1,4 +1,3 @@
-/* ===== Base Styles ===== */
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +24,7 @@ body {
   color: #eee;
 }
 
-/* ===== Navbar ===== */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -54,15 +53,6 @@ body {
   font-size: 1.4rem;
 }
 
-.btn-outline {
-  background: transparent;
-  border: 1px solid var(--primary);
-  color: var(--primary);
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
 .btn-filled {
   background: var(--primary);
   color: #fff;
@@ -71,16 +61,11 @@ body {
   text-decoration: none;
 }
 
-.dark .btn-outline {
-  border-color: var(--primary-light);
-  color: var(--primary-light);
-}
-
 .dark .btn-filled {
   background: var(--primary-light);
 }
 
-/* ===== Hero Section ===== */
+/* Hero */
 .intro {
   display: flex;
   flex-wrap: wrap;
@@ -107,7 +92,7 @@ body {
   margin-bottom: 1rem;
 }
 
-/* ===== Social Icons ===== */
+/* Socials */
 .socials a {
   font-size: 1.3rem;
   color: inherit;
@@ -120,7 +105,7 @@ body {
   color: var(--primary);
 }
 
-/* ===== Projects Section ===== */
+/* Projects */
 .projects-section {
   padding: 3rem 0 2rem;
 }
@@ -174,27 +159,29 @@ body {
   color: #ccc;
 }
 
-.project-link {
-  display: inline-block;
-  margin-top: 0.8rem;
-  color: var(--primary);
-  font-weight: bold;
+/* Link Styles */
+a {
   text-decoration: none;
+  font-weight: bold;
+  color: var(--primary);
   transition: color 0.3s ease;
 }
 
-.project-link:hover {
+a:hover {
   color: var(--primary-light);
 }
 
-
-
-.inline-link:hover {
-  color: var(--primary-light);
+.project-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 1.05rem;
 }
 
+.inline-link {
+  font-weight: bold;
+}
 
-/* ===== Features Section ===== */
+/* Features */
 .features {
   margin: 3rem 0;
   background-color: #fff;
@@ -235,16 +222,12 @@ body {
   color: var(--primary);
 }
 
-.features li {
-  transition: color 0.3s, transform 0.2s;
-}
-
 .features li:hover {
   color: var(--primary);
   transform: translateX(5px);
 }
 
-/* ===== Learning Pill Badge ===== */
+/* Badge */
 .learning-pill {
   display: inline-block;
   margin: 2rem auto 0;
@@ -270,10 +253,9 @@ body {
 
 .dark .learning-pill {
   background-color: var(--primary-light);
-  color: #fff;
 }
 
-/* ===== Footer ===== */
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem 0 1rem;
@@ -281,7 +263,7 @@ footer {
   color: #888;
 }
 
-/* ===== Responsive Media Queries ===== */
+/* Responsive */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
