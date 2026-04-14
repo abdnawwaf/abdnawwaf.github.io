@@ -1,97 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>abdnawwaf</title>
-  <link rel="icon" type="image/png" href="fav-icon.png" sizes="32x32">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portfolio Under Construction</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+  }
+
+  .container {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  p {
+    opacity: 0.8;
+    font-size: 1.1rem;
+  }
+
+  .loader {
+    margin: 25px auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.2);
+    border-top: 5px solid #38bdf8;
+    animation: spin 1s linear infinite;
+  }
+
+  .glow {
+    color: #38bdf8;
+    text-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8;
+  }
+
+  .dots::after {
+    content: "";
+    animation: dots 1.5s infinite;
+  }
+
+  /* Animations */
+  @keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px);}
+    50% { transform: translateY(-10px);}
+    100% { transform: translateY(0px);}
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95);}
+    to { opacity: 1; transform: scale(1);}
+  }
+
+  @keyframes dots {
+    0% { content: "."; }
+    33% { content: ".."; }
+    66% { content: "..."; }
+    100% { content: "."; }
+  }
+
+  /* Floating background particles */
+  .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #38bdf8;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: rise 6s infinite linear;
+  }
+
+  @keyframes rise {
+    from {
+      transform: translateY(100vh) scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(-10vh) scale(1);
+      opacity: 1;
+    }
+  }
+
+</style>
 </head>
+
 <body>
-  <nav class="navbar">
-    <div class="logo" onclick="window.location.reload()">abdnawwaf</div>
-    <div class="nav-controls">
-      <i class="fas fa-sun theme-toggle" title="Toggle Theme"></i>
-      <a href="#projects" class="btn-filled">Projects</a>
-    </div>
-  </nav>
 
-  <header class="intro">
-    <div class="intro-left">
-      <h1>Hey, It's me abdnawwaf</h1>
-      <p>
-        Hello, I'm Abdul Nawwaf K, but most people on the internet call me abdnawwaf. As a high school student, I have a strong interest in technology. What began as a casual curiosity has developed into a passion for using code to create things. I learn by doing, whether it's video editing, AI, or web design. I like bringing concepts to life, especially when they save time or solve issues. I learn, develop, and improve at what I love with each project.
-      </p>
-      <div class="socials">
-  <a href="https://github.com/abdnawwaf" target="_blank" aria-label="GitHub">
-    <i class="fab fa-github"></i>
-  </a>
-  <a href="https://linkedin.com/in/abdnawwaf" target="_blank" aria-label="LinkedIn">
-    <i class="fab fa-linkedin"></i>
-  </a>
-  <a href="https://x.com/abdnawwaf" target="_blank" aria-label="X (Twitter)">
-  <i class="fa-brands fa-twitter"></i>
-</a>
-  <a href="https://medium.com/@abdnawwaf" target="_blank" aria-label="Medium">
-    <i class="fab fa-medium"></i>
-  </a>
-  <a href="mailto:abdnawwafk@gmail.com" aria-label="Email">
-    <i class="fas fa-envelope"></i>
-  </a>
-  <a href="https://instagram.com/abd_nawwaf" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://www.facebook.com/people/abdnawwaf/61578629066482" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook"></i>
-  </a>
+<!-- floating particles -->
+<script>
+  for (let i = 0; i < 25; i++) {
+    let p = document.createElement("div");
+    p.className = "particle";
+    p.style.left = Math.random() * 100 + "vw";
+    p.style.animationDuration = (3 + Math.random() * 5) + "s";
+    document.body.appendChild(p);
+  }
+</script>
+
+<div class="container">
+  <h1 class="glow">🚧 My Portfolio</h1>
+  <div class="loader"></div>
+  <p>Building something awesome<span class="dots"></span></p>
 </div>
-  </header>
 
-  <section id="projects" class="projects-section">
-  <h2>🧠 Projects</h2>
-  <div class="projects">
-    <div class="project">
-      <h3>Counter Web App</h3>
-      <p>My first interactive web app, built with HTML, CSS, and JavaScript. It was a fun way to learn the basics and see how code can bring simple ideas to life.</p>
-      <a href="https://abdnawwaf.github.io/Counter-App/" target="_blank" class="project-link">Visit Project</a>
-    </div>
-
-<div class="project">
-      <h3>QR Code Generator</h3>
-      <p>A powerful and customizable QR code generator web app built with HTML, CSS, and JavaScript. It supports text, URLs, vCards, Wi-Fi credentials, live webcam scanning, image scanning, and more.</p>
-      <a href="https://abdnawwaf.github.io/Free-Qr-Code-Generator/" target="_blank" class="project-link">Try it here</a>
-    </div>
-
-    
-  </div>
-</section>
-
-  <section class="features">
-    <h2>🚀 What I Do</h2>
-    <ul>
-      <li>Student Dev — Building web and app projects</li>
-      <li>AI Enthusiast — Exploring generative images and ideas</li>
-      <li>Video Editor — Creating reels and creative edits</li>
-      <li>Learning by Building — Growing through hands-on projects</li>
-    </ul>
-  </section>
-
-  <div class="learning-pill">
-    Learning by Building 🔧
-  </div>
-
-  <footer>
-    <p>&copy; abdnawwaf 2026</p>
-  </footer>
-
-  <script>
-    const themeToggle = document.querySelector('.theme-toggle');
-    themeToggle.onclick = () => {
-      document.body.classList.toggle('dark');
-      themeToggle.classList.toggle('fa-sun');
-      themeToggle.classList.toggle('fa-moon');
-    };
-  </script>
 </body>
 </html>
